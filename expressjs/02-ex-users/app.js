@@ -25,7 +25,18 @@ app.post("/users",(req,res)=>{
         })
         
 }
+
+app.delete("/users/:id",(req,res)=>{
+    if(!users.find(e=>e.id==req.params.id)) res.status(404).send({success:false, message:"User doesn't Exist"})
+    else{
+        users=users.find(e=>e.id!==req.params.id)
+        fs.writeFile("./users.json",JSON.stringify(users),(err)=>{
+            if (err) res.status(500).send(
+                {success:false, message:"Server ERROR"})
+            else res.send({success:true, message: "user deleted"})
+        })
+    }
    
-})
+});
 
 app.listen(3000)
