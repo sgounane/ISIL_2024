@@ -23,7 +23,7 @@ app.post("/users",(req,res)=>{
             if (err) res.status(500).send({success:false, message:"Server ERROR"})
             else res.send({success:true, data:req.body})
         })
-        
+
 }
 
 app.delete("/users/:id",(req,res)=>{
