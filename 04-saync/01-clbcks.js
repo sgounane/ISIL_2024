@@ -1,6 +1,6 @@
 const fs=require("fs");
 const request=require("request")
-request("https://google.com",(err,res,body)=>{
+request("https://jsonplaceholder.typicode.com/todos",(err,res,body)=>{
     if(err){
         console.log(err);
         return;
@@ -11,9 +11,15 @@ request("https://google.com",(err,res,body)=>{
     }
     try{
         body=JSON.parse(body);
-
-
-        
+        let str="";
+        body.forEach(e => {
+            let line=""
+            for(k in e )
+                line+=e[k]+","
+            line=line.substring(0,line.length-1)+"\n"
+            str+=line
+        });
+        fs.writeFile("todos.csv",str, (err)=>{})
     }catch(e){
         console.log("Parsing Json ERROR")
     }
