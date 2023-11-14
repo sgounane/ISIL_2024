@@ -17,6 +17,7 @@
     {
         "id":4,
         "title":"PHP",
+        "user_id":1,
         "content":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi<i> provident</i> nihil architecto quidem eveniet reprehenderit tenetur <b>consequatur</b> tempore unde tempora! Optio ab perferendis, vero perspiciatis doloremque ut sint dolores harum."
     }
 ]

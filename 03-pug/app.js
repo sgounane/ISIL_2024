@@ -20,6 +20,7 @@ app.use((req,res,next)=>{
     console.log(req.session)
     req.data={
         user:{},
+        selected:1,
         articles:articles
     };
     if(req.session.user) req.data.user=req.session.user
@@ -32,7 +33,7 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/login",(req,res)=>{
-    res.render("login");
+    res.render("login",req.data);
 })
 
 app.post("/login",(req,res)=>{
