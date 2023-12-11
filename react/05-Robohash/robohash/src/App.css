@@ -1,0 +1,30 @@
+.container{
+    width: 80vw;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.cardList{
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    width: 160px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+.card img{
+    width: 100%;
+}
+
+.searche{
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+}
