@@ -8,7 +8,7 @@ let robots=[{
   id:2,
   image:"https://robohash.org/2",
   nom:"Ahmed ...",
-  email:"yahya@yahoo.ma"
+  email:"yahya@yahoo.ma",
 },
 {
 id:3,
